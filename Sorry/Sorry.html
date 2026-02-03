@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carta de Desculpas e Amor</title>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet"> <!-- Fonte pixelada -->
+    <style>
+        body {
+            font-family: 'Press Start 2P', cursive; /* Estilo pixel */
+            background: linear-gradient(45deg, #FFB6C1, #FFC0CB); /* Gradiente rosa romântico */
+            color: #FFFFFF; /* Branco limpo */
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .container {
+            text-align: center;
+            max-width: 600px;
+            padding: 20px;
+            background-color: rgba(255, 255, 255, 0.2); /* Fundo semi-transparente mais romântico */
+            border-radius: 15px;
+            box-shadow: 0 0 30px rgba(255, 105, 180, 0.5); /* Sombra rosa */
+            transition: all 0.5s ease; /* Transições suaves */
+        }
+
+        .slide {
+            display: none;
+            opacity: 0;
+            transition: opacity 1s ease-in-out; /* Fade suave */
+        }
+
+        .slide.active {
+            display: block;
+            opacity: 1;
+        }
+
+        /* Carta animada para intro */
+        .carta {
+            width: 200px;
+            height: 150px;
+            background-color: #FFE4E1; /* Rosa claro */
+            border: 5px solid #FF69B4; /* Borda rosa */
+            border-radius: 10px;
+            margin: 20px auto;
+            position: relative;
+            animation: zoomCarta 3s ease-in-out infinite; /* Zoom in/out */
+            box-shadow: 0 0 20px rgba(255, 105, 180, 0.8);
+        }
+
+        .carta::before {
+            content: "💌"; /* Emoji de carta */
+            font-size: 50px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        @keyframes zoomCarta {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.2); } /* Zoom in/out */
+        }
+
+        img {
+            max-width: 50%;
+            height: auto;
+            border-radius: 10px;
+            margin: 20px 0;
+            box-shadow: 0 0 15px rgba(255, 105, 180, 0.5);
+        }
+
+        .frase {
+            font-size: 12px; /* Um pouco menor para romantismo */
+            margin: 20px 0;
+            line-height: 1.8;
+            text-shadow: 1px 1px 2px #555; /* Contorno preto não muito preto (cinza escuro) */
+        }
+
+        .emoji {
+            font-size: 24px;
+        }
+
+        .navegacao {
+            margin-top: 20px;
+        }
+
+        button {
+            background-color: #FFFFFF;
+            color: #FFB6C1;
+            border: 2px solid #FF69B4;
+            padding: 10px 20px;
+            font-family: 'Press Start 2P', cursive;
+            font-size: 10px;
+            border-radius: 10px;
+            cursor: pointer;
+            margin: 0 10px;
+            transition: all 0.3s ease; /* Hover suave */
+            box-shadow: 0 0 10px rgba(255, 105, 180, 0.3);
+        }
+
+        button:hover {
+            background-color: #FF69B4;
+            color: #FFFFFF;
+            transform: scale(1.1); /* Leve aumento */
+            box-shadow: 0 0 20px rgba(255, 105, 180, 0.8);
+        }
+
+        /* Gotas/amo-te caindo */
+        .gota {
+            position: absolute;
+            font-size: 18px;
+            color: #FF1493; /* Rosa intenso */
+            animation: cair 3s linear forwards;
+            pointer-events: none;
+            z-index: 10;
+        }
+
+        @keyframes cair {
+            0% { transform: translateY(-50px) rotate(0deg); opacity: 1; }
+            100% { transform: translateY(100vh) rotate(360deg); opacity: 0; }
+        }
+
+        /* Corações flutuando (originais) */
+        .coracao {
+            position: absolute;
+            font-size: 20px;
+            color: #FF69B4;
+            animation: flutuar 5s linear infinite;
+            pointer-events: none;
+        }
+
+        @keyframes flutuar {
+            0% { transform: translateY(100vh) rotate(0deg); opacity: 1; }
+            100% { transform: translateY(-100px) rotate(360deg); opacity: 0; }
+        }
+
+        /* Iframe da música (oculto) */
+        #musica {
+            position: absolute;
+            top: -9999px; /* Oculto da vista */
+            left: -9999px;
+            width: 1px;
+            height: 1px;
+            opacity: 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div id="slides">
+            <!-- Slide Intro (0) -->
+            <div class="slide active">
+                <div class="carta"></div>
+                <p class="frase">Seja bem-vinda aos meus pedidos de desculpas e fiz com amor, espero que gostes. 💖</p>
+            </div>
+            <!-- Slide 1 -->
+            <div class="slide">
+                <img src="IMG/imagem 1 (1).jpeg" alt="Foto 1">
+                <p class="frase">Querida, peço mil desculpas por tudo. Sinto uma saudade imensa de você, como se o mundo estivesse vazio sem o seu sorriso. 😍💕</p>
+            </div>
+            <!-- Slide 2 -->
+            <div class="slide">
+                <img src="IMG/imagem 1 (2).jpeg" alt="Foto 2">
+                <p class="frase">Não suporto a ideia de que minhas ações te levaram ao extremo, fazendo você deixar de gostar de mim. Eu amo você muitíssimo, mais do que palavras podem dizer. 😍❤️</p>
+            </div>
+            <!-- Slide 3 -->
+            <div class="slide">
+                <img src="IMG/imagem 1 (3).jpeg" alt="Foto 3">
+                <p class="frase">Cada dia sem você é uma tortura. Sinto saudades dos nossos momentos juntos, e meu coração clama pelo seu amor. 😍💖</p>
+            </div>
+            <!-- Slide 4 -->
+            <div class="slide">
+                <img src="IMG/imagem 1 (4).jpeg" alt="Foto 4">
+                <p class="frase">Me perdoe por ter te magoado. A ideia de você não gostar mais de mim me destrói, pois eu te amo com toda a minha alma. 😍❤️</p>
+            </div>
+            <!-- Slide 5 -->
+            <div class="slide">
+                <img src="IMG/imagem 1 (5).jpeg" alt="Foto 5">
+                <p class="frase">Saudades de você me consomem. Não aguento pensar que cheguei ao ponto de te fazer desistir de mim. Eu amo você infinitamente. 😍💕</p>
+            </div>
+            <!-- Slide 6 -->
+            <div class="slide">
+                <img src="IMG/imagem 1 (6).jpeg" alt="Foto 6">
+                <p class="frase">Desculpe-me do fundo do coração. Sinto saudades profundas, e a possibilidade de você não gostar mais de mim me deixa devastado. Eu te amo demais. 😍❤️</p>
+            </div>
+            <!-- Slide 7 -->
+            <div class="slide">
+                <img src="IMG/imagem 1 (7).jpeg" alt="Foto 7">
+                <p class="frase">Por favor, me dê uma chance de consertar tudo. Eu amo você mais do que qualquer coisa no mundo, e sem você, nada faz sentido. 😍💖</p>
+            </div>
+        </div>
+        <div class="navegacao">
+            <button id="anterior">Anterior</button>
+            <button id="proximo">Próximo</button>
+        </div>
+    </div>
+
+    <!-- Iframe para música do YouTube (oculto, autoplay em loop) -->
+    <iframe id="musica" src="https://www.youtube.com/watch?v=5_F0YCqdxnM&list=RDeXCFWIKQR9Y&index=5" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+    <!-- Corações flutuando (gerados dinamicamente) -->
+    <script>
+        // Função para criar corações flutuando (originais)
+        function criarCoracao() {
+            const coracao = document.createElement('div');
+            coracao.className = 'coracao';
+            coracao.textContent = '❤️';
+            coracao.style.left = Math.random() * 100 + 'vw';
+            coracao.style.animationDelay = Math.random() * 5 + 's';
+            document.body.appendChild(coracao);
+            setTimeout(() => coracao.remove(), 5000);
+        }
+
+        // Criar corações a cada 2 segundos (menos frequente para não sobrecarregar)
+        setInterval(criarCoracao, 2000);
+
+        // Função para criar gotas/amo-te (para hover e click)
+        function criarGota() {
+            const gota = document.createElement('div');
+            gota.className = 'gota';
+            // Alterna entre coração e "amo-te"
+            gota.textContent = Math.random() > 0.5 ? '💖' : 'amo-te';
+            gota.style.left = Math.random() * 100 + 'vw';
+            gota.style.top = '0px';
+            document.body.appendChild(gota);
+            setTimeout(() => gota.remove(), 3000);
+        }
+
+        // Navegação entre slides
+        let slideAtual = 0;
+        const slides = document.querySelectorAll('.slide');
+        const btnAnterior = document.getElementById('anterior');
+        const btnProximo = document.getElementById('proximo');
+
+        function mostrarSlide(index) {
+            slides.forEach(slide => slide.classList.remove('active'));
+            slides[index].classList.add('active');
+        }
+
+        // Hover nos botões: cria gotas
+        [btnAnterior, btnProximo].forEach(btn => {
+            btn.addEventListener('mouseenter', () => {
+                for (let i = 0; i < 5; i++) { // 5 gotas por hover
+                    setTimeout(criarGota, i * 200);
+                }
+            });
+        });
+
+        // Click em Próximo: cria gotas e navega
+        btnProximo.addEventListener('click', () => {
+            // Efeito de gotas
+            for (let i = 0; i < 3; i++) { // 3 gotas por click
+                setTimeout(criarGota, i * 300);
+            }
+            // Navegação
+            slideAtual = (slideAtual + 1) % slides.length;
+            mostrarSlide(slideAtual);
+            if (slideAtual === slides.length - 1) {
+                btnProximo.textContent = 'Reiniciar';
+                btnProximo.addEventListener('click', () => location.reload());
+            } else {
+                btnProximo.textContent = 'Próximo';
+            }
+        });
+
+        // Click em Anterior: navega (sem gotas extras, para foco no próximo)
+        btnAnterior.addEventListener('click', () => {
+            slideAtual = (slideAtual - 1 + slides.length) % slides.length;
+            mostrarSlide(slideAtual);
+            btnProximo.textContent = 'Próximo';
+        });
+
+        // Controle de volume da música (tom suave) - Nota: Limitado pelo YouTube
+        // Não é possível ajustar volume diretamente via JS em iframes. Para tom suave, o autoplay usa volume padrão.
+        // Alternativa: Baixe a música e use <audio src="musica.mp3" autoplay loop volume="0.3"></audio> para mais controle.
+    </script>
+</body>
+</html>
